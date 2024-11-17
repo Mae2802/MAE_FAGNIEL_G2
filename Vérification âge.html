@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification d'âge</title>
+    <link rel="stylesheet" href="css/vérification.css">
+</head>
+<body>
+    <div class="age-check-container">
+        <h1>Certifiez-vous être majeur, en droit de consommer de l'alcool ?</h1>
+        <button class="btn-yes" onclick="handleAgeCheck(true)">J'ai + de 18 ans</button>
+        <button class="btn-no" onclick="handleAgeCheck(false)">J'ai - de 18 ans</button>
+    </div>
+
+    <script>
+        function handleAgeCheck(isAdult) {
+            if (isAdult) {
+                window.location.href = "siteweb.html";
+            } else {
+                alert("Vous devez avoir 18 ans ou plus pour accéder à ce site.");
+                window.location.href = "https://www.alcool-info-service.fr/";
+            }
+        }
+    </script>
+</body>
+</html>
